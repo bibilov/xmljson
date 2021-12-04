@@ -30,7 +30,7 @@
 Считать дерево элементов можно, например, вот так:
 
 ```python
-import xml.etree.ElementTree as ET
+import xml_task.etree.ElementTree as ET
 from urllib.request import urlopen
 
 data = urlopen('https://lenta.ru/rss').read().decode('utf8')
