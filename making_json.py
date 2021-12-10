@@ -11,4 +11,4 @@ def save_json(path, attributes):
 if __name__ == "__main__":
     data = urlopen('https://lenta.ru/rss').read().decode('utf8')
     root = ET.fromstring(data)[0].findall('item')
-    save_json('news.json', [{'pubDate': element.find('pubDate').text, 'title': element.find('title').text} for element in root])
+    save_json('news.json', [{'pubDate': elements.find('pubDate').text, 'title': elements.find('title').text} for elements in root])
