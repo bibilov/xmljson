@@ -4,7 +4,7 @@ from urllib.request import urlopen
 
 
 def save_as_json(name, out):
-    json.dump(out, open(name, 'w', encoding='utf8'))
+    json.dump(out, open(name, 'w', encoding='utf8'), ensure_ascii=False, indent=1)
 
 
 def save_pd_title(articles):
